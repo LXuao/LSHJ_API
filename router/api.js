@@ -166,7 +166,7 @@ router.post("/editimg", (req, res) => {
     form.uploadDir = "static/upload";
     form.parse(req, (err, fields, files) => {
         let oldimg = fields.oldimg[0].slice(-35)  //旧图地址
-        fs.unlink("./" + oldimg, (err) => {
+        fs.unlink("./static/" + oldimg, (err) => {
         })  //删除旧图
         let img = files.img[0].path;
 
@@ -194,7 +194,7 @@ router.post("/editimg_xszfm", (req, res) => {
     form.uploadDir = "static/upload";
     form.parse(req, (err, fields, files) => {
         let oldimg = fields.oldimg[0].slice(-35)  //旧图地址
-        fs.unlink("./" + oldimg, (err) => {
+        fs.unlink("./static/" + oldimg, (err) => {
         })  //删除旧图
         let img_xszfm = files.img_xszfm[0].path;
 
@@ -222,7 +222,7 @@ router.post("/editimg_qs", (req, res) => {
     form.uploadDir = "static/upload";
     form.parse(req, (err, fields, files) => {
         let oldimg = fields.oldimg[0].slice(-35)  //旧图地址
-        fs.unlink("./" + oldimg, (err) => {
+        fs.unlink("./static/" + oldimg, (err) => {
         })  //删除旧图
         let img_qs = files.img_qs[0].path;
         img_qs = img_qs.substr(img_qs.indexOf('\\') + 1);
@@ -249,7 +249,7 @@ router.post("/editimg_new", (req, res) => {
     form.uploadDir = "static/upload";
     form.parse(req, (err, fields, files) => {
         let oldimg = fields.oldimg[0].slice(-35)  //旧图地址
-        fs.unlink("./" + oldimg, (err) => {
+        fs.unlink("./static/" + oldimg, (err) => {
         })  //删除旧图
         let img_new = files.img_new[0].path;
         img_new = img_new.substr(img_new.indexOf('\\') + 1);
@@ -277,7 +277,7 @@ router.post("/editimg_jsz", (req, res) => {
     form.uploadDir = "static/upload";
     form.parse(req, (err, fields, files) => {
         let oldimg = fields.oldimg[0].slice(-35)  //旧图地址
-        fs.unlink("./" + oldimg, (err) => {
+        fs.unlink("./static/" + oldimg, (err) => {
         })  //删除旧图
         let img_jsz = files.img_jsz[0].path;
         img_jsz = img_jsz.substr(img_jsz.indexOf('\\') + 1);
